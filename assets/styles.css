@@ -265,10 +265,26 @@ html.lenis,html.lenis body{height:auto}
   border-bottom:1px solid var(--ligne);
 }
 .entete .conteneur{display:flex;align-items:center;justify-content:flex-start;gap:12px 24px;min-height:68px}
-.marque{text-decoration:none;display:flex;flex-direction:column;line-height:1.05;margin-right:auto}
+.marque{text-decoration:none;display:grid;grid-template-columns:max-content max-content;column-gap:10px;align-items:center;line-height:1.05;margin-right:auto}
+.marque > b,.marque > span{grid-column:2;white-space:nowrap}
+.marque > b{align-self:end}
+.marque > span{align-self:start}
+.marque-logo{grid-column:1;grid-row:1 / span 2;height:46px;width:13.6px;max-width:none;display:block}
+.pied .marque-logo{height:60px;width:17.7px}
+.pied .marque > b,.pied .marque > span{white-space:normal}
+.pied .marque{grid-template-columns:max-content minmax(0,1fr)}
 .marque b{font-family:var(--display);font-weight:400;font-size:21px;text-transform:uppercase;letter-spacing:.02em;color:var(--foret)}
 .marque span{font-family:var(--etiquette);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse);margin-top:3px}
 @media (max-width:480px){.masque-mobile{display:none}}
+@media (max-width:380px){
+  .entete .marque b{font-size:17px}
+  .entete .marque span{font-size:9.5px}
+  .entete .marque-logo{height:38px;width:11.2px}
+  .entete .marque{column-gap:8px}
+  .entete .conteneur{gap:8px}
+  .entete .theme-btn{padding:0 8px}
+  .entete .menu-btn{width:40px}
+}
 .nav{display:flex;align-items:center;gap:28px}
 .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
 .nav ul a{text-decoration:none;font-size:14px;font-weight:500;padding:12px 0;display:inline-block}
