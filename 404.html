@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page introuvable - Cabinet Chiropratique Condette</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Instrument+Sans:wght@500;600&display=swap">
+<script>
+  try { var t = localStorage.getItem('chiro-theme'); if (/^(terre|mixte|nuit)$/.test(t)) document.documentElement.setAttribute('data-theme', t); } catch(e) {}
+  document.documentElement.classList.add('is-loading');
+  setTimeout(function(){ document.documentElement.classList.remove('is-loading'); }, 2500);
+</script>
+<!-- Chemins absolus : la page 404 peut être servie depuis n’importe quelle adresse du site -->
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="entete sur-clair">
+  <div class="conteneur">
+    <a class="marque" href="/">
+      <b>Cabinet Condette</b>
+      <span><span class="masque-mobile">Chiropraxie, </span>Châlons-en-Champagne</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero-page erreur-404 sur-sombre" aria-labelledby="hero-titre">
+    <div class="conteneur hero-grille">
+      <h1 class="hero-geant" id="hero-titre">
+        <span class="hero-sur">Page introuvable</span>
+        <span class="mot" aria-hidden="true">404</span>
+      </h1>
+      <div class="hero-bas">
+        <div class="hero-texte">
+          <p>La page que vous cherchez n’existe pas ou a été déplacée.</p>
+        </div>
+        <div class="boutons">
+          <a class="btn btn-sable" href="/">Retour à l’accueil</a>
+          <a class="btn btn-contour" href="tel:+33326212640">Appeler le 03 26 21 26 40</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="/assets/main.js"></script>
+</body>
+</html>
