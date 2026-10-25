@@ -192,12 +192,7 @@
         '<path id="vague-trace" class="vague-bande" d="M0 100 L1440 100"/>' +
         '<text class="vague-texte" dominant-baseline="central"><textPath href="#vague-trace" startOffset="0"></textPath></text>' +
         '<text class="vague-texte vague-mesure" x="0" y="-100"></text>' +
-      '</svg>' +
-      '<button class="vague-pause" type="button">' +
-        '<svg class="icone-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>' +
-        '<svg class="icone-lecture" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>' +
-        '<span class="sr-only"><span class="pause-texte">Pause</span> du bandeau défilant</span>' +
-      '</button>';
+      '</svg>';
     v.querySelector('textPath').textContent = hero.dataset.vague;
     hero.after(v);
   });
