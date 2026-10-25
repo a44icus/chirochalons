@@ -249,6 +249,7 @@ html.lenis,html.lenis body{height:auto}
 .btn:focus-visible:not(:hover){animation:lueur-tour 3s linear infinite}
 .entete .btn{min-height:44px;padding:0 20px;font-size:14px}
 .btn svg{width:18px;height:18px}
+@media (max-width:400px){.btn-sable{font-size:14.5px;padding:0 20px;gap:8px}}
 .lien-secondaire{
   display:inline-flex;align-items:center;min-height:48px;padding:0 4px;
   font-weight:600;font-size:16px;color:var(--texte-photo);
