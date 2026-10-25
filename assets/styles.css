@@ -347,6 +347,10 @@ html.lenis,html.lenis body{height:auto}
 .hero-haut p{font-family:var(--etiquette);font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;line-height:1.7;color:var(--brume);margin:0}
 .hero-haut a{color:var(--lin)}
 .hero-geant{margin:0;font-family:var(--display);font-weight:400;text-transform:uppercase}
+/* Accueil : logo à gauche du titre */
+.hero-titre-logo{display:flex;align-items:flex-end;gap:clamp(14px,2vw,28px)}
+.hero-titre-logo .hero-geant{flex:1;min-width:0}
+.hero-logo{flex:none;width:clamp(30px,5.2vw,76px);height:auto;display:block}
 .hero-sur{display:block;font-size:clamp(1.6rem,3.2vw,3rem);line-height:1;color:var(--lin);padding-left:.04em;margin-bottom:.08em}
 .mot{display:inline-flex;white-space:nowrap;overflow:hidden;font-size:12vw;line-height:.9;padding:.16em 0 .06em;margin-top:-.14em;margin-bottom:-.06em;color:var(--sable);will-change:transform}
 .mot > span{display:block;will-change:transform}
