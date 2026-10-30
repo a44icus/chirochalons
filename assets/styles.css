@@ -474,13 +474,13 @@ html.is-loading .mot > span{transform:translateY(110%)}
 .soin img{width:100%;height:112%;object-fit:cover}
 .soin h3{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppercase;line-height:1;margin:0 0 10px;color:var(--titre-clair)}
 .soin p{margin:0;color:var(--mousse);font-size:16px;max-width:26rem}
-/* Mobile : les cartes défilent à l’horizontale au lieu de s’empiler */
+/* Mobile : deux cartes sur la première ligne, la troisième en pleine largeur */
 @media (max-width:900px){
-  .soins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--gouttiere));padding-inline:var(--gouttiere);scroll-padding-inline:var(--gouttiere)}
-  .soins::-webkit-scrollbar{display:none}
-  .soin{flex:0 0 72%;scroll-snap-align:start}
-  .soin figure{aspect-ratio:4/5;margin-bottom:16px}
-  .soin h3{font-size:22px}
+  .soins{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+  .soin:last-child{grid-column:1 / -1}
+  .soin figure{aspect-ratio:4/5;margin-bottom:12px}
+  .soin:last-child figure{aspect-ratio:16/9}
+  .soin h3{font-size:19px}
 }
 
 /* Étapes numérotées */
