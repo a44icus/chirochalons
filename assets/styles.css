@@ -447,6 +447,7 @@ html.is-loading .mot > span{transform:translateY(110%)}
 .section-tete.centre .chapo{margin-inline:auto;max-width:40rem}
 .section-pied{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 48px;margin-top:clamp(40px,5vw,64px);padding-top:28px;border-top:1px solid var(--ligne)}
 .section-pied p{margin:0;max-width:40rem;color:var(--mousse);font-size:16px}
+.section-tete.centre ~ .section-pied{justify-content:center}
 .sur-sombre .section-pied{border-top-color:var(--ligne-claire)}
 .sur-sombre .section-pied p{color:var(--brume)}
 
@@ -468,7 +469,14 @@ html.is-loading .mot > span{transform:translateY(110%)}
 .soin img{width:100%;height:112%;object-fit:cover}
 .soin h3{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppercase;line-height:1;margin:0 0 10px;color:var(--titre-clair)}
 .soin p{margin:0;color:var(--mousse);font-size:16px;max-width:26rem}
-@media (max-width:900px){.soins{grid-template-columns:1fr}.soin figure{aspect-ratio:4/3}}
+/* Mobile : les cartes défilent à l’horizontale au lieu de s’empiler */
+@media (max-width:900px){
+  .soins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--gouttiere));padding-inline:var(--gouttiere);scroll-padding-inline:var(--gouttiere)}
+  .soins::-webkit-scrollbar{display:none}
+  .soin{flex:0 0 72%;scroll-snap-align:start}
+  .soin figure{aspect-ratio:4/5;margin-bottom:16px}
+  .soin h3{font-size:22px}
+}
 
 /* Étapes numérotées */
 .etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.5vw,40px)}
@@ -486,6 +494,12 @@ html.is-loading .mot > span{transform:translateY(110%)}
 }
 @media (max-width:980px){.etapes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.etapes{grid-template-columns:1fr}}
+/* Étapes sans description (accueil) : numéro et titre sur une ligne en mobile */
+@media (max-width:560px){
+  .etapes.compactes{gap:0}
+  .etapes.compactes li{display:flex;align-items:center;gap:18px;padding:16px 0}
+  .etapes.compactes .num{font-size:2.4rem;margin:0;min-width:2.2ch}
+}
 
 /* Points (listes courtes à intitulé) */
 .points{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.5vw,40px)}
