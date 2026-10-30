@@ -352,6 +352,11 @@ html.lenis,html.lenis body{height:auto}
 .hero-titre-logo{display:flex;align-items:flex-end;gap:clamp(14px,2vw,28px)}
 .hero-titre-logo .hero-geant{flex:1;min-width:0}
 .hero-logo{flex:none;width:clamp(30px,5.2vw,76px);height:auto;display:block}
+/* Mobile : logo et nom déjà présents dans l’en-tête, le titre reste lisible par les lecteurs d’écran */
+@media (max-width:760px){
+  .hero-logo{display:none}
+  .hero-titre-logo .hero-geant{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+}
 .hero-sur{display:block;font-size:clamp(1.6rem,3.2vw,3rem);line-height:1;color:var(--lin);padding-left:.04em;margin-bottom:.08em}
 .mot{display:inline-flex;white-space:nowrap;overflow:hidden;font-size:12vw;line-height:.9;padding:.16em 0 .06em;margin-top:-.14em;margin-bottom:-.06em;color:var(--sable);will-change:transform}
 .mot > span{display:block;will-change:transform}
